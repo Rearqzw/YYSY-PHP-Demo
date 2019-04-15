@@ -29,6 +29,7 @@ class Access
 
         //验证参数
         $sign=isset($bodyData['sign']) ? $bodyData['sign']:'';
+        $orderId=isset($bodyData['orderId']) ? $bodyData['orderId']:'';
         $quota=isset($bodyData['quota']) ? $bodyData['quota']:'';
         $id=isset($bodyData['openid']) ? $bodyData['openid']:'';
         $timestamp=isset($bodyData['timestamp'])?$bodyData['timestamp']:'';
@@ -50,7 +51,8 @@ class Access
             'accessKey'=>$this->accessKey,
             'id'=>$id,
             'quota'=>$quota,
-            'timestamp'=>$timestamp
+            'timestamp'=>$timestamp,
+            'orderId'=>$orderId
         ];
 
 
